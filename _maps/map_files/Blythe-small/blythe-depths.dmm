@@ -275,6 +275,9 @@
 /turf/open/floor/carpet/royalblue,
 /area/crew_quarters/heads/hos/private)
 "bD" = (
+/obj/structure/sign/poster/prewar/vault_tec{
+	pixel_y = -32
+	},
 /turf/open/floor/carpet/royalblue,
 /area/f13/underground/overseer_office)
 "bE" = (
@@ -432,7 +435,8 @@
 	},
 /area/f13/bunker/bunkerthree)
 "co" = (
-/obj/structure/table/reinforced,
+/obj/structure/closet/cabinet,
+/obj/item/clothing/accessory/medal/gold/captain,
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/underground/overseer_office)
 "cp" = (
@@ -654,6 +658,12 @@
 	icon_state = "2-i"
 	},
 /area/f13/underground/overseer_office)
+"dl" = (
+/obj/machinery/door/airlock/grunge{
+	id_tag = "vaultdorm1"
+	},
+/turf/open/floor/f13/wood,
+/area/crew_quarters/dorms)
 "dq" = (
 /obj/machinery/door/window/right{
 	dir = 8
@@ -663,7 +673,8 @@
 /area/hydroponics/garden)
 "dr" = (
 /obj/machinery/door/airlock/silver{
-	name = "Bathroom"
+	name = "Bathroom";
+	id_tag = "vaultbathroom"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 8
@@ -815,7 +826,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/maintenance/central/secondary)
 "em" = (
-/obj/structure/closet/cabinet,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/royalblue,
 /area/f13/underground/overseer_office)
 "en" = (
@@ -915,6 +926,10 @@
 "eL" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/plaque,
 /area/f13/bunker/bunkertwo)
+"eP" = (
+/obj/structure/bookcase/manuals/research_and_development,
+/turf/open/floor/plasteel/f13/vault_floor/blue,
+/area/f13/underground/overseer_office)
 "eS" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/armor/tier4,
@@ -1332,15 +1347,25 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/caves)
 "hH" = (
-/obj/machinery/door/poddoor/preopen{
-	id = 257;
-	name = "shop blast door"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/machinery/door/poddoor/preopen{
+	id = "521";
+	name = "vault entrance blast door"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
+"hK" = (
+/obj/structure/chair/f13chair1{
+	pixel_y = 15;
+	pixel_x = 7
+	},
+/obj/structure/sign/poster/prewar/poster73{
+	pixel_x = 32
+	},
+/turf/open/floor/carpet/royalblue,
+/area/f13/underground/overseer_office)
 "hO" = (
 /obj/machinery/computer/security/telescreen/vault{
 	pixel_y = 32
@@ -1461,8 +1486,8 @@
 /area/hydroponics/garden)
 "iw" = (
 /obj/machinery/door/poddoor/preopen{
-	id = 257;
-	name = "shop blast door"
+	id = "521";
+	name = "vault entrance blast door"
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
@@ -1991,6 +2016,15 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/f13,
 /area/f13/bunker/bunkertwo)
+"li" = (
+/obj/machinery/button/door{
+	id = "vaultbathroom";
+	normaldoorcontrol = 1;
+	specialfunctions = 4;
+	pixel_y = 22
+	},
+/turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,
+/area/crew_quarters/dorms)
 "lj" = (
 /obj/structure/table/booth,
 /obj/item/trash/semki{
@@ -3054,6 +3088,12 @@
 /obj/structure/bed,
 /obj/item/bedsheet/black,
 /obj/effect/landmark/start/f13/vaultdweller,
+/obj/machinery/button/door{
+	id = "vaultdorm3";
+	normaldoorcontrol = 1;
+	pixel_x = 28;
+	specialfunctions = 4
+	},
 /turf/open/floor/f13/wood,
 /area/crew_quarters/dorms)
 "rB" = (
@@ -3732,7 +3772,6 @@
 "vF" = (
 /obj/structure/closet/cabinet,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/greenglow,
 /obj/effect/spawner/lootdrop/f13/cash_random_low,
 /turf/open/floor/f13/wood,
 /area/crew_quarters/dorms)
@@ -4155,6 +4194,14 @@
 /obj/structure/ore_box,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/maintenance/central/secondary)
+"yn" = (
+/obj/structure/bookcase/manuals/research_and_development,
+/obj/item/toy/figure/captain{
+	pixel_y = 17;
+	pixel_x = 9
+	},
+/turf/open/floor/plasteel/f13/vault_floor/blue,
+/area/f13/underground/overseer_office)
 "yo" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
@@ -4872,9 +4919,21 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/maintenance/central/secondary)
 "Ck" = (
-/obj/structure/bookcase/manuals/research_and_development,
-/turf/open/floor/wood_mosaic,
-/area/science/research)
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/food/drinks/bottle/whiskey{
+	pixel_y = 8;
+	pixel_x = -8
+	},
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
+	pixel_y = 7;
+	pixel_x = -1
+	},
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
+	pixel_y = 7;
+	pixel_x = -7
+	},
+/turf/open/floor/plasteel/f13/vault_floor/blue,
+/area/f13/underground/overseer_office)
 "Cl" = (
 /obj/structure/table/reinforced,
 /obj/item/gun/energy/taser,
@@ -5789,6 +5848,16 @@
 /obj/effect/spawner/lootdrop/f13/crafting,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/ambientlighting/building/m)
+"Hq" = (
+/obj/machinery/button/door{
+	id = "521";
+	name = "Blast Doors";
+	pixel_x = -25
+	},
+/turf/open/floor/plasteel/f13/vault_floor/neutral/side{
+	dir = 9
+	},
+/area/f13/vault)
 "Ht" = (
 /obj/machinery/power/port_gen/pacman/super/vault{
 	anchored = 1
@@ -5978,18 +6047,20 @@
 	},
 /area/medical/chemistry)
 "Iw" = (
-/obj/structure/table/reinforced,
-/obj/item/paper_bin{
+/obj/item/kirbyplants{
+	icon_state = "plant-21";
+	pixel_y = 20;
+	pixel_x = -7
+	},
+/obj/item/kirbyplants{
+	icon_state = "plant-22";
 	pixel_x = -5;
-	pixel_y = 6
+	pixel_y = 1
 	},
-/obj/item/pen/charcoal{
-	pixel_x = -6;
-	pixel_y = 5
-	},
-/obj/item/pen{
-	pixel_x = -1;
-	pixel_y = 7
+/obj/item/kirbyplants{
+	icon_state = "plant-22";
+	pixel_x = 10;
+	pixel_y = 11
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/underground/overseer_office)
@@ -6272,7 +6343,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
 /area/security/brig)
 "JX" = (
-/obj/structure/simple_door/room,
+/obj/machinery/door/airlock/grunge{
+	id_tag = "vaultdorm2"
+	},
 /turf/open/floor/f13/wood,
 /area/crew_quarters/dorms)
 "Kb" = (
@@ -6485,6 +6558,12 @@
 /obj/item/bedsheet/black,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/landmark/start/f13/vaultdweller,
+/obj/machinery/button/door{
+	id = "vaultdorm2";
+	normaldoorcontrol = 1;
+	pixel_x = 28;
+	specialfunctions = 4
+	},
 /turf/open/floor/f13/wood,
 /area/crew_quarters/dorms)
 "Lk" = (
@@ -7328,12 +7407,20 @@
 	},
 /area/crew_quarters/bar/atrium)
 "PT" = (
-/obj/structure/bed/pod,
-/obj/item/bedsheet/captain,
-/obj/item/toy/plush/beeplushie{
-	pixel_y = 4
+/obj/structure/table/reinforced,
+/obj/item/paper_bin{
+	pixel_x = -5;
+	pixel_y = 6
 	},
-/turf/open/floor/carpet/royalblue,
+/obj/item/pen{
+	pixel_x = -1;
+	pixel_y = 7
+	},
+/obj/item/pen/charcoal{
+	pixel_x = -6;
+	pixel_y = 5
+	},
+/turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/underground/overseer_office)
 "PV" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -7904,6 +7991,12 @@
 "Tm" = (
 /turf/open/floor/f13,
 /area/f13/bunker/bunkertwo)
+"To" = (
+/obj/machinery/door/airlock/grunge{
+	id_tag = "vaultdorm3"
+	},
+/turf/open/floor/f13/wood,
+/area/crew_quarters/dorms)
 "Tq" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
@@ -8204,6 +8297,20 @@
 	name = "dirty floor"
 	},
 /area/f13/bunker/bunkerthree)
+"UJ" = (
+/obj/structure/bed/double,
+/obj/item/bedsheet/captain{
+	pixel_y = 14;
+	pixel_x = -2
+	},
+/obj/item/bedsheet/captain{
+	pixel_x = -2
+	},
+/obj/item/toy/plush/beeplushie{
+	pixel_y = 4
+	},
+/turf/open/floor/carpet/royalblue,
+/area/f13/underground/overseer_office)
 "UP" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/closed/indestructible/vaultdoor,
@@ -8562,6 +8669,12 @@
 /obj/structure/bed,
 /obj/item/bedsheet/brown,
 /obj/effect/landmark/start/f13/vaultdweller,
+/obj/machinery/button/door{
+	id = "vaultdorm1";
+	normaldoorcontrol = 1;
+	pixel_x = 28;
+	specialfunctions = 4
+	},
 /turf/open/floor/f13/wood,
 /area/crew_quarters/dorms)
 "Xg" = (
@@ -8660,6 +8773,12 @@
 /obj/machinery/smartfridge/bottlerack/lootshelf/cans,
 /turf/open/floor/plasteel/dark,
 /area/f13/caves)
+"XE" = (
+/obj/structure/chair/comfy/black{
+	dir = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/blue,
+/area/f13/underground/overseer_office)
 "XH" = (
 /obj/effect/spawner/lootdrop/f13/ncr_k_ration,
 /turf/open/floor/plasteel/dark,
@@ -22790,7 +22909,7 @@ Jz
 Db
 rl
 rl
-nY
+Hq
 Jz
 JT
 MA
@@ -25188,8 +25307,8 @@ RB
 RB
 RB
 RB
-RB
-RB
+Qu
+Qu
 Qu
 Qu
 Qu
@@ -25226,7 +25345,7 @@ KZ
 mG
 rz
 KZ
-qR
+li
 hr
 KZ
 RB
@@ -25390,10 +25509,10 @@ RB
 RB
 RB
 RB
-RB
-RB
 Qu
 bG
+AG
+AG
 iL
 hE
 AG
@@ -25419,13 +25538,13 @@ hn
 nY
 lT
 KZ
-JX
+dl
 KZ
 KZ
 JX
 KZ
 KZ
-JX
+To
 KZ
 KZ
 dr
@@ -25592,10 +25711,10 @@ RB
 RB
 RB
 RB
-RB
-RB
 Qu
 iL
+dk
+dk
 dk
 dk
 dk
@@ -25794,11 +25913,11 @@ RB
 RB
 RB
 RB
-RB
-RB
 Qu
 iL
 dk
+PT
+Ck
 Iw
 co
 mA
@@ -25996,13 +26115,13 @@ RB
 RB
 RB
 RB
-RB
-RB
 Qu
 iL
 dk
 lm
+XE
 cE
+QR
 Ib
 aI
 Yq
@@ -26198,11 +26317,11 @@ RB
 RB
 RB
 RB
-RB
-RB
 Qu
 oN
 dk
+eP
+em
 em
 bD
 mA
@@ -26400,13 +26519,13 @@ RB
 RB
 RB
 RB
-RB
-RB
 Qu
 AG
 dk
+yn
+hK
+UJ
 Xg
-PT
 mA
 mA
 mA
@@ -26434,7 +26553,7 @@ CY
 Pl
 wC
 wC
-Ck
+TD
 RY
 KL
 TD
@@ -26602,10 +26721,10 @@ RB
 RB
 RB
 RB
-RB
-RB
 Qu
 AG
+dk
+dk
 dk
 dk
 mA
@@ -26804,9 +26923,9 @@ RB
 RB
 RB
 RB
-RB
-RB
 Qu
+bG
+AG
 iL
 Cg
 Bu
@@ -27006,9 +27125,9 @@ RB
 RB
 RB
 RB
-RB
-RB
 Qu
+Qu
+AG
 Vp
 iL
 Fc
@@ -27209,7 +27328,7 @@ RB
 RB
 RB
 RB
-RB
+Qu
 Qu
 Qu
 LA
