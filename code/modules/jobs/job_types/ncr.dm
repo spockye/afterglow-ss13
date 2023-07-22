@@ -801,8 +801,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 375
 
 	loadout_options = list(
-		/datum/outfit/loadout/shockht,	// Minigun
-		/datum/outfit/loadout/supportht, // R84
+		/datum/outfit/loadout/shockht,	// R84
+		/datum/outfit/loadout/supportht, // minigun
+		/datum/outfit/loadout/meleeht //Supersledge
 		)
 
 /datum/outfit/job/ncr/f13heavytrooper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -840,13 +841,18 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/outfit/loadout/supportht
 	name = "Support Heavy Trooper"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/grenadelauncher = 1,
-		/obj/item/ammo_box/a40mm = 1,
+		/obj/item/minigunpackbal5mm = 1,
+		/obj/item/melee/onehanded/knife/bowie = 1,
+		)
+
+/datum/outfit/loadout/meleeht
+	name = "Melee Heavy Trooper"
+	backpack_contents = list(
+		/obj/item/twohanded/sledgehammer/supersledge = 1,
 		/obj/item/gun/ballistic/revolver/hunting = 1,
 		/obj/item/ammo_box/c4570 = 2,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		)
-
 
 // COMBAT ENGINEER
 
