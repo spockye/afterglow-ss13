@@ -840,8 +840,10 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/outfit/loadout/supportht
 	name = "Support Heavy Trooper"
 	backpack_contents = list(
-		/obj/item/m2flamethrowertank = 1,
-		/obj/item/ammo_box/jerrycan = 1,
+		/obj/item/gun/ballistic/revolver/grenadelauncher = 1,
+		/obj/item/ammo_box/a40mm = 1,
+		/obj/item/gun/ballistic/revolver/hunting = 1,
+		/obj/item/ammo_box/c4570 = 2,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		)
 
